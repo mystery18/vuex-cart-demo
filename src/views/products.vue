@@ -43,7 +43,7 @@ export default {
     ...mapMutations('cart', ['AddToCart']) // 添加购物车事件 要传参的（放到vuex中）
   },
   created () {
-    // 当组件创建完毕，调用getProducts方法 发送请求，获取商品数据，把商品数据放到vuex
+    // 当组件创建完毕，调用getProducts方法 发送请求，获取商品数据，把商品数据放到vuex（异步请求，所以用actions）
     this.getProducts()
   }
   // data () {

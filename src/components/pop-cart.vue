@@ -34,6 +34,9 @@ export default {
     ...mapState('cart', ['cartProducts']),
     ...mapGetters('cart', ['getTotalCount', 'getTotalPrice'])
   },
+  // 这里用了命名空间，所以第一个参数写的是哪一个modules的state
+  // 可以理解为 mapState 和 mapGetters 都是获取vuex中的数据，渲染到页面上。所以它俩是放在computed里
+  // mapMutations 就是触发mutation中的方法，传入那个方法的名字就可以调用了
   methods: {
     ...mapMutations('cart', ['DelFromCart'])
   }
